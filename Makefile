@@ -14,6 +14,7 @@ bench:
 	go test -bench=. -benchmem ./...
 
 coverage:
+	mkdir -p build
 	go test -coverprofile=build/coverage.out ./...
 	go tool cover -html=build/coverage.out -o build/coverage.html
 	go tool cover -func=build/coverage.out
